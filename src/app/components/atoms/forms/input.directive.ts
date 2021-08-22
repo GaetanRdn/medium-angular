@@ -13,7 +13,7 @@ export class InputDirective {
    * We use getter and setter to directly work with the native element value
    */
   @Input()
-  set value(value: string) {
+  set value(value: string | undefined) {
     this._elementRef.nativeElement.value = value;
   }
 
