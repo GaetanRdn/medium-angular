@@ -35,7 +35,11 @@
             "prefix": "med",
             "style": "camelCase"
           }
-        ]
+        ],
+        "@angular-eslint/no-host-metadata-property": 0,
+        "@angular-eslint/no-inputs-metadata-property": 0,
+        "@angular-eslint/no-outputs-metadata-property": 0,
+        "no-underscore-dangle": 0
       }
     },
     {
