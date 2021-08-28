@@ -4,7 +4,9 @@
   "compilerOptions": {
     "outDir": "./out-tsc/app",
     "paths": {
-      "@app/*": ["src/app/*"]
+      "@app/*": ["src/app/*"],
+      "@pages/*": ["src/app/components/pages/*"],
+      "@env/*": ["src/environments/*"]
     },
     "types": []
   },
