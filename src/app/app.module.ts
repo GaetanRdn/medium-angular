@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { TemplatesModule } from 'src/app/components/templates/templates.module';
+import { AppRoutingModule } from '@app/app-routing.module';
 import { AppComponent } from './app.component';
+import { PageNotFoundComponent } from '@pages/page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, TemplatesModule],
+  declarations: [AppComponent, PageNotFoundComponent],
+  imports: [BrowserModule, AppRoutingModule],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}
