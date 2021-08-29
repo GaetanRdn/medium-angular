@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: 'feature-1', component: Feature1Component
   }, {
-    path: 'feature-2', component: Feature2Component,
+    path: 'feature-2', component: Feature2Component
   }, {
     path: 'feature-3', children: [
       {
@@ -26,6 +26,9 @@ const routes: Routes = [
         pathMatch: 'full' // don't forget it
       }
     ]
+  }, {
+    path: 'feature-4',
+    loadChildren: () => import('./components/pages/feature4/feature4.module').then(mod => mod.Feature4Module),
   }, {
     path: '', pathMatch: 'full', redirectTo: 'feature-1'
   }, {
