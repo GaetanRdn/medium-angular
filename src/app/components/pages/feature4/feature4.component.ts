@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, Data, ParamMap } from '@angular/router';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'med-feature4',
@@ -7,6 +9,10 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class Feature4Component implements OnInit {
   public currentCode!: string | null;
+
+  get data(): Observable<any> {
+    return this._activatedRoute.data.pipe(map((data: Data) =>  data.myData));
+  }
 
   constructor(private _activatedRoute: ActivatedRoute) {}
 
